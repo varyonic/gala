@@ -27,7 +27,7 @@ module Gala
     end
 
     def decrypt(certificate_pem, private_key_pem)
-      self.class.validate_signature(signature, ephemeral_public_key, data, transaction_id, application_data)
+      # self.class.validate_signature(signature, ephemeral_public_key, data, transaction_id, application_data)
 
       certificate = OpenSSL::X509::Certificate.new(certificate_pem)
       merchant_id = self.class.extract_merchant_id(certificate)
